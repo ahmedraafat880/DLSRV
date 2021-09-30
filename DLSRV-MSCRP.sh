@@ -5,6 +5,9 @@ echo "------------------------------------------------------"
 echo "Welcome To DebugZ-LAB-Server Synchronization Manager"
 echo "------------------------------------------------------"
 
+mega-session | grep -q ''
+sleep 5
+
 if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
 then
 mega-logout | grep -q ''
@@ -21,7 +24,7 @@ read -r email
 
 echo -n "Please Enter Your Password On Mega : "
 
-read -r password
+read -r -s password
 
 if mega-login "$email" "$password" | grep -q 'Failed to Login';
 then
