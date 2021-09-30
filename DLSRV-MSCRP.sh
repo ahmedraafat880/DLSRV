@@ -4,11 +4,9 @@
 echo "------------------------------------------------------"
 echo "Welcome To DebugZ-LAB-Server Synchronization Manager"
 echo "------------------------------------------------------"
-
+rm -rf /root/DLSRV
 mega-session | grep -q ''
 sleep 5
-cd
-rm -rf DLSRV
 
 if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
 then
