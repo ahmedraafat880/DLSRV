@@ -24,7 +24,17 @@ read -r email
 
 echo -n "Please Enter Your Password On Mega : "
 
-read -r -s password
+unset password;
+
+while IFS= read -r -s -n1 pass; do
+  if [[ -z $pass ]]; then
+     echo
+     break
+  else
+     echo -n '*'
+     password+=$pass
+  fi
+done
 
 if mega-login "$email" "$password" | grep -q 'Failed to Login';
 then
