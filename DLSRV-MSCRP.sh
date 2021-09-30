@@ -5,6 +5,12 @@ echo "------------------------------------------------------"
 echo "Welcome To DebugZ-LAB-Server Synchronization Manager"
 echo "------------------------------------------------------"
 
+if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
+then
+mega-logout | grep -q ''
+fi
+
+
 if mega-whoami | grep -q 'Not logged in';
 then
 login=true
