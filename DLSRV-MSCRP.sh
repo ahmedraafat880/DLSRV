@@ -129,10 +129,10 @@ then
  if [ "$option3" = "qemu" ]; 
  then
  echo "----------------------------------------------------"
- echo "WARNING : YOUR TRYING TO DOWNLOAD A LARGE FOLDER"
+ echo "WARNING : YOU ARE TRYING TO DOWNLOAD A LARGE FOLDER"
  echo "----------------------------------------------------"
  while $flag ;
-  echo -n "Do You Want To Complete Downloading (yes) Or To Choose A Specific Image (no) : "
+  echo -n "Do You Want To Complete Downloading (yes) Or Choosing A Specific Image (no) : "
   read -r answer1
  do
   if [ "$answer1" = "yes" ];
