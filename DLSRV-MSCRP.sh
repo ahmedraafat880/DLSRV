@@ -55,6 +55,7 @@ echo -n '\n'
 if mega-ls ahmedrafat@debugz-it.com:"$mainDir" | grep -q "Couldn't find";
 then
 echo "Activation Status : Off (Can't Proceed) -- Contact DebugZ To Enable Activation --"
+echo     "-----------------------------------------------"
 exit
 else
 echo "Activation Status : on"
