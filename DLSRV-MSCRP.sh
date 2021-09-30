@@ -7,6 +7,7 @@ echo "------------------------------------------------------"
 
 mega-session | grep -q ''
 sleep 5
+rm -rf DLSRV
 
 if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
 then
