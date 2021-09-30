@@ -4,7 +4,6 @@
 echo "------------------------------------------------------"
 echo "Welcome To DebugZ-LAB-Server Synchronization Manager"
 echo "------------------------------------------------------"
-rm -rf /root/DLSRV/
 mega-session | grep -q ''
 sleep 5
 
