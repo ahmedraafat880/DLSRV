@@ -5,11 +5,10 @@ echo "------------------------------------------------------"
 echo "Welcome To DebugZ-LAB-Server Synchronization Manager"
 echo "------------------------------------------------------"
 
-if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
-then
-mega-logout | grep -q ''
-fi
-
+#if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
+#then
+#mega-logout | grep -q ''
+#fi
 
 if mega-whoami | grep -q 'Not logged in';
 then
@@ -60,6 +59,29 @@ exit
 else
 echo "Activation Status : on"
 fi
+echo     "-----------------------------------------------"
+
+echo     "-----------------------------------------------"
+echo     "Updating Your Docker Images"
+echo -n  '#####                                   (10%)\r'
+sleep 1
+echo -n  '#########                               (15%)\r'
+sleep 1
+echo -n  '###########                             (20%)\r'
+sleep 1
+echo -n  '#############                           (66%)\r'
+sleep 1
+echo -n  '####################################   (100%)\r'
+echo -n  '\n'
+mkdir megaFiles
+cd megaFiles
+if ! docker images | grep -q 'IPerf-Docker';
+then
+mega-get https://mega.nz/file/BcoC3aib#Un4HOdrfROx2LIea2jZPFdgbVzpkXrXqfiV4R1lso_Y
+docker image load -i IPerf-Docker
+fi
+cd
+rm -rf megaFiles
 echo     "-----------------------------------------------"
 
 flag=true
