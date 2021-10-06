@@ -20,12 +20,12 @@ do
 echo -n "Please Enter Your Email On Mega : "
 
 read -r email
-stty -echo
-echo -n "Please Enter Your Password On Mega : "
 
+echo -n "Please Enter Your Password On Mega : "
+stty -echo
 read -r password
 stty echo
-echo "/n"
+cd /root/
 if mega-login "$email" "$password" | grep -q 'Failed to Login';
 then
 echo "Username Or Password Is Incorrect (Try Again)"
