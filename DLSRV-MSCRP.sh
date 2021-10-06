@@ -25,6 +25,7 @@ echo -n "Please Enter Your Password On Mega : "
 
 read -r password
 stty echo
+echo "/n"
 if mega-login "$email" "$password" | grep -q 'Failed to Login';
 then
 echo "Username Or Password Is Incorrect (Try Again)"
