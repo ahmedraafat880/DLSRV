@@ -7,11 +7,6 @@ echo "------------------------------------------------------"
 mega-session | grep -q ''
 sleep 5
 
-#if mega-whoami | grep -q 'Account e-mail: debugzmega@debugz-it.com';
-#then
-#mega-logout | grep -q ''
-#fi
-
 if mega-whoami | grep -q 'Not logged in';
 then
 login=true
