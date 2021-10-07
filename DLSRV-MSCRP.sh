@@ -19,6 +19,7 @@ read -r email
 echo -n "Please Enter Your Password On Mega : "
 stty -echo
 read -r password
+stty echo
 echo ""
 if mega-login "$email" "$password" | grep -q 'Failed to Login';
 then
