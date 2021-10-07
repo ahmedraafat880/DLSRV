@@ -21,7 +21,7 @@ stty -echo
 read -r password
 stty echo
 echo ""
-if mega-login "$email" "$password" | grep -q 'invalid';
+if mega-login "$email" "$password" | grep -q 'API:err:';
 then
 echo "Username Or Password Is Incorrect (Try Again)"
 continue
