@@ -24,7 +24,6 @@ echo ""
 if mega-login "$email" "$password" | grep -q 'API:err:';
 then
 echo "Username Or Password Is Incorrect (Try Again)"
-continue
 else
 echo "Hello"
 mega-login "$email" "$password"
