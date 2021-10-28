@@ -71,10 +71,10 @@ echo -n  '####################################   (100%)\r'
 echo -n  '\n'
 mkdir megaFiles
 cd megaFiles
-if ! docker images | grep -q 'IPerf-Docker';
+if ! docker images | grep -q 'IPerf_Docker';
 then
 mega-get https://mega.nz/file/BcoC3aib#Un4HOdrfROx2LIea2jZPFdgbVzpkXrXqfiV4R1lso_Y
-docker image load -i IPerf-Docker
+docker image load -i IPerf_Docker
 fi
 cd
 rm -rf megaFiles
